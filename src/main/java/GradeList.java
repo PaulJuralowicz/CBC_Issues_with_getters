@@ -1,13 +1,13 @@
 import java.util.HashMap;
 
 public class GradeList {
-
+    // Grades must be 0 or greater!
     private HashMap<String, Integer> grades;
 
     public GradeList(){
         grades = new HashMap<>();
     }
-
+    // Makes sure the grade is 0 or greater!
     public boolean setGrade(String student, int grade){
         if (grade >= 0){
             grades.put(student, grade);
@@ -27,6 +27,7 @@ public class GradeList {
         map1.put("Bad Guy", -100); // add a random thing to that hashmap
         HashMap<String, Integer> map2 = a.getGrades(); // get the internal HashMap again
         System.out.println("Bad Guy: " + Integer.toString(map2.get("Bad Guy"))); // see if it contains an entry for Bad Guy
+        // We broke Spec!
     }
 
 }
